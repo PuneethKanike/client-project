@@ -5,24 +5,25 @@ const Banner = () => {
       id="home"
       className="max-w-contentContainer mx-auto py-10 mdl:py-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4"
     >
-      <motion.h3
+      
+      <motion.h1
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.6 }}
-        className="text-lg font-titleFont tracking-wide text-textGreen"
+        transition={{ duration: 0.5, delay: 0.7 }}
+        className="text-4xl lgl:text-5xl font-titleFont font-semibold flex flex-col"
       >
-        Hi, my name is
-      </motion.h3>
-      <motion.h1
+        Hi There,
+        </motion.h1>
+        <motion.h1
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-4xl lgl:text-6xl font-titleFont font-semibold flex flex-col"
       >
-        Puneeth K.
-        <span className="text-textDark mt-2 lgl:mt-4">
-          I build things for the <span className="text-textGreen">Web</span>.
-        </span>
+        <span className="text-textDark">
+  {"I'm Mohammed"} <span className="text-textGreen">Safwan</span>.
+</span>
+
       </motion.h1>
       <motion.p
         initial={{ y: 10, opacity: 0 }}
