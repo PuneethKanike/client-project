@@ -23,13 +23,14 @@ module.exports = {
         lgl: "1024px",
         xl: "1280px",
       },
-      colors: {
-        bodyColor: "#0A192F",
-        textGreen: "#64ffda",
-        textLight: "#ccd6f6",
-        textDark: "#8892b0",
-        hoverColor: "rgba(100,255,218,0.1)",
-      },
+     colors: {
+  bodyColor: "#E5D9F2",   // Light background
+  textGreen: "#2e3a59",   // Muted green for contrast
+  textLight: "#2e3a59",   // Darker shade for readability
+  textDark: "#4f5b73",    // Softer contrast for secondary text
+  hoverColor: "rgba(0, 121, 107, 0.1)", // Light hover effect with green tone
+},
+
       fontFamily: {
         bodyFont: ["Montserrat", "sans-serif"],
         titleFont: ["Inter", "sans-serif"],
