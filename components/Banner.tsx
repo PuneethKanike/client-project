@@ -31,7 +31,7 @@ const Banner = () => {
         transition={{ duration: 0.5, delay: 0.8 }}
         className="text-base md:max-w-[650px] text-textDark font-medium"
       >
-        I specialize in building responsive and dynamic web applications using the MERN stack. With a keen eye for design and a commitment to crafting seamless user experiences, I bring ideas to life through code. Explore my projects and see how I can help turn your vision into reality!{" "}
+        I vision into reality!{" "}
         
       </motion.p>
       <a href="https://github.com/PuneethKanike" target="_blank">
