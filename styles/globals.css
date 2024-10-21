@@ -11,6 +11,14 @@
 .scrollbarHide::-webkit-scrollbar {
   display: none;
 }
+
 .active {
-  color: #64ffda;
+  color: #000000; /* Active text color */
+
+  /* Adjust underline position */
+  font-weight: bold; /* Make the active item bold */
+  transform: scale(1.4); /* Slightly enlarge the active item */
+  transition: color 0.3s ease, text-decoration 0.3s ease, text-underline-offset 0.3s ease, transform 0.3s ease;
 }
+
+
