@@ -10,9 +10,9 @@ const Projects = () => {
     <section id="project" className=" relative max-w-container mx-auto lgl:px-20 py-24">
       {/* Background Image Div */}
       <div
-        className="absolute inset-0 z-0 bg-no-repeat bg-center rotate-90 over "
+        className="absolute inset-0 z-0 bg-no-repeat bg-center rotate-90  "
         style={{
-          // backgroundImage: "url('../assets/images/bg7.png')", // Set the background image
+          backgroundImage: "url('../assets/images/bg5.png')", // Set the background image
           backgroundSize: 'cover', // Adjust size as needed
         }}
       />
@@ -33,7 +33,7 @@ const Projects = () => {
                   src={eShop}
                   alt="amazonImg"
                 />
-                <div className="absolute w-full h-full bg-textGreen/10 rounded-lg top-0 left-0 group-hover:bg-transparent duration-300"></div>
+                <div className="absolute w-full h-full bg-hoverColor/50 rounded-lg top-0 left-0 group-hover:bg-transparent duration-300"></div>
               </div>
             </a>
             <div className="w-full xl:w-1/2 flex flex-col gap-6 lgl:justify-between items-end text-right xl:-ml-16 z-10">
@@ -43,7 +43,7 @@ const Projects = () => {
                 </p>
                 <h3 className="text-2xl font-bold">Forever - ( An E-Commerce Web App )</h3>
               </div>
-              <p className="bg-[#112240] text-sm md:text-base p-2 md:p-6 rounded-md">
+              <p className="bg-[#b090e7] text-sm text-slate-900 md:text-lg p-2 md:p-6 rounded-md">
                 Programmed a full-stack e-commerce website allowing users to browse products, filter by categories, add
                 items to a cart, and complete purchases{" "}
                 with <span className="text-textGreen">COD</span> and <span className="text-textGreen">Stripe</span> or <span className="text-textGreen">Razorpay</span>.
@@ -89,7 +89,7 @@ const Projects = () => {
                   src={jobJunction}
                   alt="cyberImg"
                 />
-                <div className="absolute w-full h-full bg-textGreen/10 rounded-lg top-0 left-0 group-hover:bg-transparent duration-300"></div>
+                <div className="absolute w-full h-full bg-hoverColor/50 rounded-lg top-0 left-0 group-hover:bg-transparent duration-300"></div>
               </div>
             </a>
             <div className="w-full xl:w-1/2 flex flex-col gap-6 justify-between items-end text-right z-10">
@@ -143,7 +143,7 @@ const Projects = () => {
                   src={realEstate}
                   alt="noorShop"
                 />
-                <div className="absolute w-full h-full bg-textGreen/10 rounded-lg top-0 left-0 group-hover:bg-transparent duration-300"></div>
+                <div className="absolute w-full h-full bg-hoverColor/50 rounded-lg top-0 left-0 group-hover:bg-transparent duration-300"></div>
               </div>
             </a>
             <div className="w-full xl:w-1/2 flex flex-col gap-6 justify-between items-end text-right xl:-ml-16 z-10">
