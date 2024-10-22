@@ -56,7 +56,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="relative max-w-containerxs mx-auto py-10 lgl:py-24 px-4"
+      className="exp-container relative max-w-containerxs mx-auto py-10 lgl:py-24 px-4"
     >
       {/* Background Image Div */}
       <div

@@ -10,7 +10,7 @@ const Projects = () => {
     <section id="project" className=" relative max-w-container mx-auto lgl:px-20 py-24">
       {/* Background Image Div */}
       <div
-        className="absolute inset-0 z-0 bg-no-repeat bg-center rotate-90  "
+        className= "absolute inset-0 z-0 bg-no-repeat bg-center rotate-90  "
         style={{
           backgroundImage: "url('../assets/images/bg5.png')", // Set the background image
           backgroundSize: 'cover', // Adjust size as needed
@@ -29,7 +29,7 @@ const Projects = () => {
             >
               <div>
                 <Image
-                  className="w-full h-full object-contain rounded"
+                  className="container-left w-full h-full object-contain rounded"
                   src={eShop}
                   alt="amazonImg"
                 />
@@ -41,14 +41,14 @@ const Projects = () => {
                 <p className="font-titleFont text-textGreen text-sm tracking-wide">
                   Featured Project
                 </p>
-                <h3 className="text-2xl font-bold">Forever - ( An E-Commerce Web App )</h3>
+                <h3 className="container-right text-2xl font-bold">Forever - ( An E-Commerce Web App )</h3>
               </div>
-              <p className="bg-[#b090e7] text-sm text-slate-900 md:text-lg p-2 md:p-6 rounded-md">
+              <p className="container-right bg-[#b090e7] text-sm text-slate-900 md:text-lg p-2 md:p-6 rounded-md">
                 Programmed a full-stack e-commerce website allowing users to browse products, filter by categories, add
                 items to a cart, and complete purchases{" "}
                 with <span className="text-textGreen">COD</span> and <span className="text-textGreen">Stripe</span> or <span className="text-textGreen">Razorpay</span>.
               </p>
-              <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
+              <ul className="container-left text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
                 <li>React</li>
                 <li>Tailwind</li>
                 <li>Cloudinary</li>
@@ -85,7 +85,7 @@ const Projects = () => {
             >
               <div>
                 <Image
-                  className="w-full h-full object-contain rounded"
+                  className=" container-left w-full h-full object-contain rounded"
                   src={jobJunction}
                   alt="cyberImg"
                 />
@@ -97,13 +97,13 @@ const Projects = () => {
                 <p className="font-titleFont text-textGreen text-sm tracking-wide">
                   Featured Project
                 </p>
-                <h3 className="text-2xl font-bold">Job Junction ( Job Portal Web App )</h3>
+                <h3 className="container-right text-2xl font-bold">Job Junction ( Job Portal Web App )</h3>
               </div>
-              <p className="text-sm md:text-base bg-[#112240] p-2 md:p-6 rounded-md xl:-mr-16">
+              <p className="container-left bg-[#b090e7] text-sm text-slate-900 md:text-lg p-2 md:p-6 rounded-md">
                 Engineered a full-stack job portal website that allows users to browse job listings, search for jobs, apply for
                 positions, and provides an <span className="text-textGreen">employer dashboard</span> for managing job applications.
               </p>
-              <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
+              <ul className="container-right text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
                 <li>React</li>
                 <li>Tailwind</li>
                 <li>Shadcn UI</li>
@@ -139,7 +139,7 @@ const Projects = () => {
             >
               <div>
                 <Image
-                  className="w-full h-full object-contain rounded"
+                  className="container-right w-full h-full object-contain rounded"
                   src={realEstate}
                   alt="noorShop"
                 />
@@ -151,13 +151,13 @@ const Projects = () => {
                 <p className="font-titleFont text-textGreen text-sm tracking-wide">
                   Featured Project
                 </p>
-                <h3 className="text-2xl font-bold">LiveLink ( Real-Estate Web App )</h3>
+                <h3 className="container-left text-2xl font-bold">LiveLink ( Real-Estate Web App )</h3>
               </div>
-              <p className="text-sm md:text-base bg-[#112240] p-2 md:p-6 rounded-md">
+              <p className="container-left bg-[#b090e7] text-sm text-slate-900 md:text-lg p-2 md:p-6 rounded-md">
                 Created a comprehensive real estate platform where users can register, manage profiles, list properties,
                 perform advanced searches, and contact landlords directly.
               </p>
-              <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
+              <ul className="container-right text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
                 <li>React</li>
                 <li>Tailwind</li>
                 <li>Oauth</li>

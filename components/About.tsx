@@ -19,7 +19,7 @@ const About = () => {
       />
       
       {/* Content on top of background */}
-      <div className="relative z-10">
+      <div className="about-container relative z-10">
         <SectionTitle title="About Me" titleNo="01" />
         <div className="flex flex-col lgl:flex-row gap-16">
           <div className="w-full lgl:w-2/3 text-base text-textDark font-medium flex flex-col gap-4">
