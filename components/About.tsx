@@ -11,12 +11,13 @@ const About = () => {
     >
       {/* Background Image Div */}
       <div
-        className="flipit absolute inset-0 z-0 bg-no-repeat bg-center opacity-50"
+        className="absolute inset-0 z-0 bg-no-repeat bg-left opacity-5 "
         style={{
-          backgroundImage: "url('../assets/images/bg9.png')", // Set the background image
-          
+          backgroundImage: "url('../assets/images/bg4.png')", // Set the background image
+          backgroundSize: '700px', // Adjust size as needed
         }}
       />
+      
       {/* Content on top of background */}
       <div className="relative z-10">
         <SectionTitle title="About Me" titleNo="01" />
@@ -91,7 +92,7 @@ const About = () => {
                   src={profileImg}
                   alt="profileImg"
                 />
-                <div className="lgl:inline-block absolute w-full h-80 bg-textGreen/20 rounded-md top-0 left-0 group-hover:bg-transparent duration-300"></div>
+                <div className="lgl:inline-block absolute w-full h-80 bg-hoverColor/40 rounded-md top-0 left-0 group-hover:bg-transparent duration-300"></div>
               </div>
             </div>
             <div className="lgl:inline-flex w-full h-80 border-2 border-textGreen rounded-md group-hover:-translate-x-8 group-hover:-translate-y-5 transition-transform duration-300"></div>

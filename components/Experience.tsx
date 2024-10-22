@@ -60,7 +60,7 @@ const Experience = () => {
     >
       {/* Background Image Div */}
       <div
-        className="absolute inset-0 z-0 bg-no-repeat bg-center"
+        className="absolute inset-0 z-0 bg-no-repeat bg-center opacity-20"
         style={{
           backgroundImage: "url('../assets/images/bg5.png')", // Set the background image
           backgroundSize: '700px', // Adjust size as needed

@@ -28,7 +28,7 @@ module.exports = {
   textGreen: "#2e3a59",   // Muted green for contrast
   textLight: "#2e3a59",   // Darker shade for readability
   textDark: "#4f5b73",    // Softer contrast for secondary text
-  hoverColor: "rgba(0, 121, 107, 0.1)", // Light hover effect with green tone
+  hoverColor: "#dec0ff", // Light hover effect with green tone
 },
 
       fontFamily: {
