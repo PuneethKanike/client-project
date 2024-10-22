@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
-    "@tsparticles/react": "^3.0.0",
     "@types/node": "18.15.7",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
@@ -23,7 +22,9 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
     "react-simple-typewriter": "^5.0.1",
+    "react-tsparticles": "^2.12.2",
     "tailwind-scrollbar": "^3.0.0",
+    "tsparticles": "^3.5.0",
     "typescript": "5.0.2"
   },
   "devDependencies": {
