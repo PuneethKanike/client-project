@@ -22,3 +22,28 @@
 }
 
 
+.bounce {
+  animation: bounceAnimation 5s ease-in-out infinite;
+}
+
+
+
+@keyframes bounceAnimation {
+  0%, 100% {
+    transform: translateY(0); /* Original position */
+  }
+  50% {
+    transform: translateY(-70px); /* Move up 20px */
+  }
+}
+
+.flipit{
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+
+
+
+
+
+

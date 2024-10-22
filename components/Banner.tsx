@@ -2,34 +2,32 @@ import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter"; // Import Typewriter
 
 const Banner = () => {
-  // Bouncing animation for the left section
-  const bounceAnimation = {
-    animate: {
-      y: [0, -10, 0], // Moves the element up 10px and then down
-      transition: {
-        duration: 1.5, // Animation duration
-        repeat: Infinity, // Repeats indefinitely
-        repeatType: "loop", // Repeats the animation in a loop
-      },
+  // Bouncing animation for the right image with continuous up and down motion
+  const imageBounceAnimation = {
+    y: [0, -20, 0], // Moves up 20px and back down
+    transition: {
+      duration: 2, // Duration of the animation
+      ease: "easeInOut", // Smoother easing
+      repeat: Infinity, // Keep repeating the bounce
+      repeatType: "loop", // Loop the animation
     },
   };
 
   return (
     <section
       id="home"
-      className="max-w-contentContainer mx-auto py-10 mdl:py-28 flex flex-col lgl:flex-row gap-4 lgl:gap-8 mdl:px-10 xl:px-4 relative"
-      style={{ position: "relative" }} // Ensure parent container is relative
+      className=" max-w-contentContainer mx-auto py-10 mdl:py-28 flex flex-col lgl:flex-row gap-4 lgl:gap-8 mdl:px-10 xl:px-4 relative overflow-hidden"
+      style={{ overflow: "visible" }} // Allow overflow
     >
       {/* Left Side (Text with bouncing animation) */}
       <motion.div
         className="flex flex-col gap-4 lgl:gap-8 flex-1 relative z-10"
-        animate="animate"
       >
         <motion.h1
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.7 }}
-          className="text-4xl text-textDark lgl:text-5xl font-titleFont font-semibold flex flex-col"
+          className="text-4xl text-textDark lgl:text-5xl font-titleFont font-semibold"
         >
           Hi There,
         </motion.h1>
@@ -38,7 +36,7 @@ const Banner = () => {
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.7 }}
-          className="text-4xl lgl:text-6xl font-titleFont font-semibold flex flex-col"
+          className="text-4xl lgl:text-6xl font-titleFont font-semibold"
         >
           <span>
             {"I'm Mohammed"} <span className="text-textGreen">Safwan</span>.
@@ -86,23 +84,29 @@ const Banner = () => {
         </a>
       </motion.div>
 
-      {/* Right Side (Image) */}
+      {/* Right Side (Image with continuous bounce animation and overflow) */}
       <motion.div
-        className="flex-1 relative"
-        initial={{ x: 10, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.9 }}
-        style={{ zIndex: 5, position: 'absolute', top: '0', right: '0', width: '50%', height: '100%' }}
+        className="hidden lgl:flex bounce flex-1 relative "
+        animate={imageBounceAnimation} // Apply animation
+        style={{
+          zIndex: 5,
+          position: 'absolute',
+          top: '0',
+          right: '0',
+          width: '60%', // Adjust width to overflow slightly
+          height: '100%', // Allow height to overflow
+          overflow: 'hidden', // Ensure overflow is visible
+        }}
       >
         <div
-          style={{
-            backgroundImage: `url(../assets/images/bg4.png)`, // Set the image as background
-            backgroundPosition: "center", // Center the background image
-            backgroundRepeat: "no-repeat", // No image repetition
-            backgroundSize: 'cover',
-            height: "100%", // Full height of the container
-            width: "100%", // Full width of the container
-          }}
+           style={{
+    backgroundImage: `url(../assets/images/bg3.png)`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: "right",
+    backgroundSize: '150%', // Change to '150%' for a larger size or use 'cover'
+    height: "100%",
+    width: "100%",
+  }}
         />
       </motion.div>
     </section>

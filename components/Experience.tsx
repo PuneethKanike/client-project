@@ -36,6 +36,7 @@ const Experience = () => {
     setWorkSplash(false);
     setWorkAmazon(false);
   };
+
   const handleSplash = () => {
     setWorkReactbd(false);
     setWorkGoogle(false);
@@ -43,6 +44,7 @@ const Experience = () => {
     setWorkSplash(true);
     setWorkAmazon(false);
   };
+
   const handleAmazon = () => {
     setWorkReactbd(false);
     setWorkGoogle(false);
@@ -50,70 +52,51 @@ const Experience = () => {
     setWorkSplash(false);
     setWorkAmazon(true);
   };
+
   return (
     <section
       id="experience"
-      className="max-w-containerxs mx-auto py-10 lgl:py-24 px-4"
+      className="relative max-w-containerxs mx-auto py-10 lgl:py-24 px-4"
     >
-      <SectionTitle title="Where I have Worked" titleNo="02" />
-      <div className="w-full mt-10 flex flex-col md:flex-row gap-16">
-        <ul className="md:w-32 flex flex-col">
-          <li
-            onClick={handleReactbd}
-            className={`${
-              workReactbd
-                ? "border-l-textGreen text-textGreen"
-                : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
-          >
-            Codelab Systems
-          </li>
-          <li
-            onClick={handleGoogle}
-            className={`${
-              workGoogle
-                ? "border-l-textGreen text-textGreen"
-                : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
-          >
-            RDL Technologies
-          </li>
-          {/* <li
-            onClick={handleApple}
-            className={`${
-              workApple
-                ? "border-l-textGreen text-textGreen"
-                : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
-          >
-            Apple
-          </li>
-          <li
-            onClick={handleSplash}
-            className={`${
-              workSplash
-                ? "border-l-textGreen text-textGreen"
-                : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
-          >
-            Splash
-          </li>
-          <li
-            onClick={handleAmazon}
-            className={`${
-              workAmazon
-                ? "border-l-textGreen text-textGreen"
-                : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
-          >
-            Amazon
-          </li> */}
-        </ul>
-        {workReactbd && <ReactBD />}
-        {workGoogle && <Google />}
-        {/* {workApple && <Apple />}
-        {workSplash && <Splash />}
-        {workAmazon && <Amazon />} */}
+      {/* Background Image Div */}
+      <div
+        className="absolute inset-0 z-0 bg-no-repeat bg-center"
+        style={{
+          backgroundImage: "url('../assets/images/bg5.png')", // Set the background image
+          backgroundSize: '700px', // Adjust size as needed
+        }}
+      />
+      {/* Content on top of background */}
+      <div className="relative z-10">
+        <SectionTitle title="Where I have Worked" titleNo="02" />
+        <div className="w-full mt-10 flex flex-col md:flex-row gap-16">
+          <ul className="md:w-32 flex flex-col">
+            <li
+              onClick={handleReactbd}
+              className={`${
+                workReactbd
+                  ? "border-l-textGreen text-textGreen"
+                  : "border-l-hoverColor text-textDark"
+              } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
+            >
+              Codelab Systems
+            </li>
+            <li
+              onClick={handleGoogle}
+              className={`${
+                workGoogle
+                  ? "border-l-textGreen text-textGreen"
+                  : "border-l-hoverColor text-textDark"
+              } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
+            >
+              RDL Technologies
+            </li>
+            {/* Add more items here as needed */}
+          </ul>
+          {workReactbd && <ReactBD />}
+          {workGoogle && <Google />}
+          {/* Add more components as needed */}
+        </div>
       </div>
     </section>
   );
