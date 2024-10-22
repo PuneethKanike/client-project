@@ -12,7 +12,7 @@ const Projects = () => {
       <div
         className= "absolute inset-0 z-0 bg-no-repeat bg-center rotate-90  "
         style={{
-          backgroundImage: "url('../assets/images/bg5.png')", // Set the background image
+          // backgroundImage: "url('../assets/images/bg5.png')", // Set the background image
           backgroundSize: 'cover', // Adjust size as needed
         }}
       />
