@@ -87,7 +87,7 @@ const Banner = () => {
       {/* Right Side (Image with continuous bounce animation and overflow) */}
       <motion.div
         className="hidden lgl:flex bounce flex-1 relative "
-        animate={imageBounceAnimation} // Apply animation
+        
         style={{
           zIndex: 5,
           position: 'absolute',
