@@ -26,8 +26,9 @@ module.exports = {
      colors: {
   bodyColor: "#E5D9F2",   // Light background
   textGreen: "#2e3a59",   // Muted green for contrast
-  textLight: "#2e3a59",   // Darker shade for readability
-  textDark: "#4f5b73",    // Softer contrast for secondary text
+  textSuperLight: "#818ea3", // Lighter shade for readability
+  textLight: "#36454F",   // Darker shade for readability
+  textDark: "#000000",    // Softer contrast for secondary text
   hoverColor: "#dec0ff", // Light hover effect with green tone
 },
 
