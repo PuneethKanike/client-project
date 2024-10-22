@@ -13,6 +13,7 @@ import Archive from "@/components/Archive";
 import { useState, useEffect, useRef } from "react";
 import Preloader from "@/components/Preloader";
 import { SpeakerWaveIcon, SpeakerXMarkIcon } from "@heroicons/react/24/outline"; // Updated import paths for Heroicons v2
+import Education from "@/components/Education";
 
 const Home: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -73,6 +74,7 @@ const Home: React.FC = () => {
             <div className="h-[88vh] mx-auto p-8">
               <Banner />
               <About />
+              <Education />
               <Experience />
               <Projects />
               <Archive />
