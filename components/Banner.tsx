@@ -27,7 +27,7 @@ const Banner = () => {
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.7 }}
-          className="text-4xl text-textDark lgl:text-5xl font-titleFont font-semibold"
+          className="text-4xl text-textSuperLight lgl:text-5xl font-titleFont font-semibold"
         >
           Hi There,
         </motion.h1>
@@ -36,10 +36,10 @@ const Banner = () => {
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.7 }}
-          className="text-4xl lgl:text-6xl font-titleFont font-semibold"
+          className="text-4xl text-textSuperLight lgl:text-6xl font-titleFont font-semibold"
         >
-          <span>
-            {"I'm Mohammed"} <span className="text-textGreen">Safwan</span>.
+          <span className="">
+            {"I'm"} <span className="text-textGreen">Mohammed Safwan</span>.
           </span>
         </motion.h1>
 
