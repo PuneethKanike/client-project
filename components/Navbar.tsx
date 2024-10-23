@@ -45,7 +45,8 @@ const Navbar = () => {
     >
       <div className="max-w-container h-full mx-auto py-1 font-titleFont flex items-center justify-between ">
         {/* ============ Logo Start here ============ */}
-        <Link href="/">
+        <Link href="#home"
+        >
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

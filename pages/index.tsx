@@ -27,23 +27,23 @@ const Home: React.FC = () => {
   }, []);
 
   // Play audio on mount
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.play().catch((err) => console.error("Audio play error: ", err));
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (audioRef.current) {
+  //     audioRef.current.play().catch((err) => console.error("Audio play error: ", err));
+  //   }
+  // }, []);
 
   // Toggle Music Play/Pause
-  const toggleMusic = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
+  // const toggleMusic = () => {
+  //   if (audioRef.current) {
+  //     if (isPlaying) {
+  //       audioRef.current.pause();
+  //     } else {
+  //       audioRef.current.play();
+  //     }
+  //     setIsPlaying(!isPlaying);
+  //   }
+  // };
 
   return (
     <>
@@ -79,7 +79,7 @@ const Home: React.FC = () => {
               <Projects />
               {/* <Archive /> */}
               <Contact />
-              <Footer />
+              {/* <Footer /> */}
             </div>
 
             {/* Right side animation */}
@@ -100,7 +100,7 @@ const Home: React.FC = () => {
           </audio>
 
           {/* Mute/Unmute Button with Icon */}
-          <button
+          {/* <button
             onClick={toggleMusic}
             className="fixed bottom-5 right-[15px] md:bottom-10 md:right-[42px] p-3 bg-transparent md:bg-hoverColor rounded-full"
           >
@@ -109,7 +109,7 @@ const Home: React.FC = () => {
             ) : (
               <SpeakerXMarkIcon className="h-4 w-4 md:h-5 md:w-5" /> // Volume off icon for muted state
             )}
-          </button>
+          </button> */}
         </main>
       )}
     </>

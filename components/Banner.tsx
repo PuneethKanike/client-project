@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter"; // Import Typewriter
 
 const Banner = () => {
+  
+
   // Bouncing animation for the right image with continuous up and down motion
   const imageBounceAnimation = {
     y: [0, -20, 0], // Moves up 20px and back down
@@ -71,6 +74,7 @@ const Banner = () => {
 
         <a
           href="#project"
+          
           
         >
           <motion.button

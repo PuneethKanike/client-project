@@ -1,46 +1,93 @@
-import { TbBrandGithub } from "react-icons/tb";
-import { SlSocialYoutube } from "react-icons/sl";
-import {
-  SlSocialLinkedin,
-  SlSocialFacebook,
-  SlSocialInstagram,
-} from "react-icons/sl";
+import Link from "next/link";
+import { TbBrandGithub, TbBrandWhatsapp } from "react-icons/tb";
+import { SlSocialLinkedin, SlSocialInstagram, SlSocialYoutube } from "react-icons/sl";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <div className="hidden mdl:inline-flex xl:hidden items-center justify-center w-full py-6 gap-4">
-      <a href="https://github.com/noorjsdivs" target="_blank">
-        <span className="w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
-          <TbBrandGithub />
-        </span>
-      </a>
-      <a
-        href="https://www.youtube.com/channel/UChkOsij0dhgft0GhHRauOAA"
-        target="_blank"
-      >
-        <span className="w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
-          <SlSocialYoutube />
-        </span>
-      </a>
-      <a
-        href="https://www.linkedin.com/in/noor-mohammad-ab2245193/"
-        target="_blank"
-      >
-        <span className="w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
-          <SlSocialLinkedin />
-        </span>
-      </a>
-      <a href="https://www.facebook.com/Noorlalu143/" target="_blank">
-        <span className="w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
-          <SlSocialFacebook />
-        </span>
-      </a>
-      <a href="https://www.instagram.com/simplenoor143/" target="_blank">
-        <span className="w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
-          <SlSocialInstagram />
-        </span>
-      </a>
-    </div>
+    <footer className="w-full bg-purple-200 py-8">
+      <div className="max-w-container mx-auto px-4 flex flex-col items-center gap-4">
+        {/* Social Media Links */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.1 }}
+          className="flex gap-6"
+        >
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            href="https://github.com/PuneethKanike/"
+            target="_blank"
+            className="text-xl text-textDark hover:text-textGreen"
+          >
+            <TbBrandGithub />
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            href="https://linkedin.com/in/puneeth-kanike/"
+            target="_blank"
+            className="text-xl text-textDark hover:text-textGreen"
+          >
+            <SlSocialLinkedin />
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            href="https://api.whatsapp.com/send?phone=917975187240"
+            target="_blank"
+            className="text-xl text-textDark hover:text-textGreen"
+          >
+            <TbBrandWhatsapp />
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            href="https://www.instagram.com/k_puneeth_gowda?igsh=MWJ1Z2hmb3I5Z2JuNg=="
+            target="_blank"
+            className="text-xl text-textDark hover:text-textGreen"
+          >
+            <SlSocialInstagram />
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            href="https://www.youtube.com/"
+            target="_blank"
+            className="text-xl text-textDark hover:text-textGreen"
+          >
+            <SlSocialYoutube />
+          </motion.a>
+        </motion.div>
+
+        {/* Footer Links */}
+        <div className="flex flex-col items-center gap-2">
+          <Link href="/privacy-policy" className="text-sm text-textDark hover:text-textGreen">
+            Privacy Policy
+          </Link>
+          <Link href="/terms-of-service" className="text-sm text-textDark hover:text-textGreen">
+            Terms of Service
+          </Link>
+        </div>
+
+        {/* Email Contact */}
+        <motion.a
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          href="mailto:reachout.puneeth@gmail.com"
+          className="text-sm text-textGreen"
+        >
+          reachout.puneeth@gmail.com
+        </motion.a>
+
+        {/* Copyright Text */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="text-sm text-textDark"
+        >
+          © 2024 Puneeth Kanike. All Rights Reserved.
+        </motion.p>
+      </div>
+    </footer>
   );
 };
 
