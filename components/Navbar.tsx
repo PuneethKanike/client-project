@@ -88,6 +88,20 @@ const Navbar = () => {
             </Link>
             <Link
               className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
+              href="#education"
+              onClick={handleScroll}
+            >
+              <motion.li
+                initial={{ y: -10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.1, delay: 0.2 }}
+              >
+                <span className="text-textGreen">02.</span>
+                Education
+              </motion.li>
+            </Link>
+            <Link
+              className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
               href="#experience"
               onClick={handleScroll}
             >

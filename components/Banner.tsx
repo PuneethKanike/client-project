@@ -70,9 +70,8 @@ const Banner = () => {
         </motion.p>
 
         <a
-          href="https://github.com/PuneethKanike"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#project"
+          
         >
           <motion.button
             initial={{ y: 10, opacity: 0 }}
@@ -80,7 +79,7 @@ const Banner = () => {
             transition={{ duration: 0.5, delay: 0.9 }}
             className="w-52 h-14 text-sm font-titleFont border border-textGreen rounded-md text-textGreen tracking-wide hover:bg-hoverColor duration-300"
           >
-            Check out my project!
+            Check out my designs!
           </motion.button>
         </a>
       </motion.div>

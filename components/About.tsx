@@ -27,57 +27,63 @@ const About = () => {
              I am an Interior Designer based in Dubai. I hold a degree in Interior Design from Shrinivas university. I am deeply passionate about enhancing spaces and creating aesthetically pleasing environments. I specialize in transforming residential and commercial spaces, blending functionality with elegance. Constantly working on innovative designs to refine my skills. I thrive on bringing unique visions to life through creative design solutions.
             </p>
            
-            <p>Here are a few technologies I have been working with recently:</p>
-            {/* <ul className="max-w-[450px] text-sm font-titleFont grid grid-cols-2 gap-2 mt-6">
+            <p>Here are my skills</p>
+            <ul className="max-w-[450px] text-sm font-titleFont grid grid-cols-2 gap-2 mt-6">
               <li className="flex items-center gap-2">
                 <span className="text-textGreen">
                   <AiFillThunderbolt />
                 </span>
-                JavaScript (ES6+)
+                2D drawing
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-textGreen">
                   <AiFillThunderbolt />
                 </span>
-                Next.js
+                3D drawing
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-textGreen">
                   <AiFillThunderbolt />
                 </span>
-                React
+                3D rendering
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-textGreen">
                   <AiFillThunderbolt />
                 </span>
-                Node.js
+                Lumion rendering
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-textGreen">
                   <AiFillThunderbolt />
                 </span>
-                TypeScript
+                Logo design
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-textGreen">
                   <AiFillThunderbolt />
                 </span>
-                Express.js
+                Autocad 2D
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-textGreen">
                   <AiFillThunderbolt />
                 </span>
-                MongoDB
+                Sketchup
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-textGreen">
                   <AiFillThunderbolt />
                 </span>
-                Tailwind CSS
+                V-Ray
               </li>
-            </ul> */}
+              <li className="flex items-center gap-2">
+                <span className="text-textGreen">
+                  <AiFillThunderbolt />
+                </span>
+                Adobe Photoshop
+              </li>
+            </ul>
           </div>
           <div className="w-full lgl:w-1/3 h-80 relative group">
             <div className="absolute w-full h-80 -left-6 -top-6 rounded-lg">

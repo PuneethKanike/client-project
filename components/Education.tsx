@@ -56,8 +56,8 @@ const Education = () => {
 
   return (
     <section
-      id="experience"
-      className="exp-container relative max-w-containerxs mx-auto py-10 lgl:py-24 px-4"
+      id="education"
+      className="exp-container relative max-w-containerxs mx-auto py-10z lgl:py-24 px-4"
     >
       {/* Background Image Div */}
       <div
