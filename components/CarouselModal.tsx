@@ -74,7 +74,7 @@ const CarouselModal: React.FC<CarouselModalProps> = ({ images, initialIndex, onC
           className="relative w-full h-full"
           style={{
             backgroundImage: isMagnifying && !isMobileView ? `url(${images[currentIndex]})` : 'none',
-            backgroundSize: isMagnifying ? '200%' : 'contain',
+            backgroundSize: isMagnifying ? '150%' : 'contain',
             backgroundPosition: `${mousePosition.x}% ${mousePosition.y}%`,
             transition: 'background-size 0.3s ease',
           }}
