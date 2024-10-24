@@ -24,11 +24,11 @@ const LeftSide = () => {
             <SlSocialLinkedin />
           </span>
         </a>
-        <a href="https://api.whatsapp.com/send?phone=917975187240" target="_blank">
+        {/* <a href="https://api.whatsapp.com/send?phone=917975187240" target="_blank">
           <span className="w-10 h-10 text-xl bg-hoverColor rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
             <TbBrandWhatsapp />
           </span>
-        </a>
+        </a> */}
         <a href="https://www.instagram.com/safwan._saffu_____/?igsh=dGI3M3p2azgxMWJh" target="_blank">
           <span className="w-10 h-10 text-xl bg-hoverColor rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
             <SlSocialInstagram />

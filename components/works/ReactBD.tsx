@@ -7,29 +7,45 @@ const ReactBD = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.1 }}
-      className="w-full"
+      className='w-full'
     >
-      <h3 className="flex gap-1 font-medium text-xl font-titleFont">
-        MERN Developer - Intern
-        <span className="text-textGreen tracking-wide">@Codelab Systems</span>
+      <h3 className='flex gap-1 font-medium text-xl font-titleFont'>
+        @ CREATIVE CLOSETS member of Maan Aljasser & Co.
+        <span className='text-textGreen tracking-wide text-sm'>| Dubai, UAE</span>
       </h3>
-      <p className="text-sm mt-1 font-medium text-textDark">
-        Jun 2024 - Aug 2024
+      <p className='text-sm mt-1 font-medium text-textDark'>
+        2023 - until present time
       </p>
-      <ul className="mt-6 flex flex-col gap-3">
-        <li className="text-base flex gap-2 text-textDark">
-          <span className="text-textGreen mt-1">
+      <ul className='mt-6 flex flex-col gap-3'>
+        <li className='text-base flex gap-2 text-textDark'>
+          <span className='text-textGreen mt-1'>
             <TiArrowForward />
           </span>
-          Contributed to client projects by building React frontends and REST APIs with Node.js.
+          Produce precise and detailed 2D and 3D CAD drawings for custom
+          closets, ensuring that measurements, materials, and designs meet
+          client specifications.
         </li>
-        <li className="text-base flex gap-2 text-textDark">
-          <span className="text-textGreen mt-1">
+        <li className='text-base flex gap-2 text-textDark'>
+          <span className='text-textGreen mt-1'>
             <TiArrowForward />
           </span>
-          Acquired practical knowledge of production-level project architectures.
+          Work closely with interior designers, architects, and clients to
+          develop designs that are functional and aesthetically pleasing.
         </li>
-        
+        <li className='text-base flex gap-2 text-textDark'>
+          <span className='text-textGreen mt-1'>
+            <TiArrowForward />
+          </span>
+          Generate 3D models for design visualization and client presentations
+          using software such as SketchUp, 3ds Max.
+        </li>
+        <li className='text-base flex gap-2 text-textDark'>
+          <span className='text-textGreen mt-1'>
+            <TiArrowForward />
+          </span>
+          Specify materials, finishes, and hardware based on the design,
+          ensuring compatibility with the client’s needs and preferences.
+        </li>
       </ul>
     </motion.div>
   );

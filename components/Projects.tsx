@@ -9,6 +9,7 @@ import { p1i1 } from "@/public/assets";
 import { p1i2 } from "@/public/assets";
 import { p1i3 } from "@/public/assets";
 import { p1i4 } from "@/public/assets";
+import { p1i5 } from "@/public/assets";
 
 const Projects = () => {
   const [showModal, setShowModal] = useState(false);
@@ -16,7 +17,7 @@ const Projects = () => {
   const [currentImages, setCurrentImages] = useState<string[]>([]);
 
   // Each project can have its own set of related images
-  const projectOneImages = [p1i1, p1i2, p1i3, p1i4];
+  const projectOneImages = [p1i1, p1i2, p1i3, p1i4, p1i5];
   const projectTwoImages = [jobJunction, "/path/to/relatedImage1.jpg", "/path/to/relatedImage2.jpg"];
   const projectThreeImages = [realEstate, "/path/to/relatedImage1.jpg", "/path/to/relatedImage2.jpg"];
 

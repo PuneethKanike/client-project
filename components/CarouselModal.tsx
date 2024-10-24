@@ -45,6 +45,11 @@ const CarouselModal: React.FC<CarouselModalProps> = ({ images, initialIndex, onC
     setMousePosition({ x, y });
   };
 
+  // Toggle magnification on image click
+  const handleImageClick = () => {
+    setIsMagnifying((prev) => !prev); // Toggle magnification state
+  };
+
   return (
     <div className="no-select fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
       {/* Close Button */}
@@ -66,28 +71,29 @@ const CarouselModal: React.FC<CarouselModalProps> = ({ images, initialIndex, onC
       {/* Image container */}
       <div
         className="relative w-full max-w-[100%] md:max-w-[100%] h-[1000%] md:h-[100%] rounded-lg shadow-lg flex justify-center items-center p-4 md:p-6"
-        onMouseMove={isMobileView ? undefined : handleMouseMove}
-        onMouseEnter={isMobileView ? undefined : () => setIsMagnifying(true)}
-        onMouseLeave={isMobileView ? undefined : () => setIsMagnifying(false)}
+        onMouseMove={isMobileView || !isMagnifying ? undefined : handleMouseMove} // Only track mouse if magnifying and not mobile
       >
         <div
-          className="relative w-full h-full"
-          style={{
-            backgroundImage: isMagnifying && !isMobileView ? `url(${images[currentIndex]})` : 'none',
-            backgroundSize: isMagnifying ? '150%' : 'contain',
-            backgroundPosition: `${mousePosition.x}% ${mousePosition.y}%`,
-            transition: 'background-size 0.3s ease',
-          }}
-        >
-          {/* Image will be hidden on hover by reducing opacity */}
-          <Image
-            src={images[currentIndex]}
-            alt={`carousel image ${currentIndex + 1}`}
-            layout="fill"
-            objectFit="contain"
-            className={`rounded-lg transition-opacity duration-300 ${isMagnifying && !isMobileView ? 'opacity-0' : 'opacity-100'}`}
-          />
-        </div>
+  className="relative w-full h-full cursor-pointer"
+  style={{
+    
+    backgroundImage: isMagnifying && !isMobileView ? `url(${images[currentIndex]})` : 'none',
+    backgroundSize: isMagnifying ? '120%' : 'contain', // Adjust magnification to 120%
+    backgroundPosition: `${mousePosition.x}% ${mousePosition.y}%`,
+    transition: 'background-size 0.3s ease',
+  }}
+  onClick={handleImageClick} // Handle click for magnification toggle
+>
+  {/* Image will be hidden on magnification by reducing opacity */}
+  <Image
+    src={images[currentIndex]}
+    alt={`carousel image ${currentIndex + 1}`}
+    layout="fill"
+    objectFit="contain"
+    className={`rounded-lg transition-opacity duration-300 ${isMagnifying && !isMobileView ? 'opacity-0' : 'opacity-100'}`}
+  />
+</div>
+
       </div>
 
       {/* Right Arrow */}
