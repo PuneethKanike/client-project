@@ -39,7 +39,7 @@ const Projects = () => {
     <section id="project" className="relative max-w-container mx-auto lgl:px-20 py-24">
       {/* Content */}
       <div className="relative z-10">
-        <SectionTitle title="Some Things I have Built" titleNo="03" />
+        <SectionTitle title="Some Things I have Designed" titleNo="03" />
         <div className="w-full flex flex-col items-center justify-center gap-28 mt-10">
           {/* Project One */}
           <div className="flex flex-col xl:flex-row gap-6">
@@ -58,7 +58,7 @@ const Projects = () => {
             </div>
             <div className="w-full xl:w-1/2 flex flex-col gap-6 lgl:justify-start items-end text-right xl:-ml-16 z-10">
               <div>
-                <p className="font-titleFont text-textGreen text-sm tracking-wide">Featured Project</p>
+                <p className="font-titleFont text-textGreen text-sm tracking-wide">Featured Design</p>
                 <h3 className="container-right text-2xl font-bold">Forever - (An E-Commerce Web App)</h3>
               </div>
               <p className="container-right bg-[#b090e7] text-sm text-slate-900 md:text-lg p-2 md:p-6 rounded-md">
@@ -85,7 +85,7 @@ const Projects = () => {
             </div>
             <div className="w-full xl:w-1/2 flex flex-col gap-6 justify-start items-start text-left z-10">
               <div>
-                <p className="font-titleFont text-textGreen text-sm tracking-wide">Featured Project</p>
+                <p className="font-titleFont text-textGreen text-sm tracking-wide">Featured Design</p>
                 <h3 className="container-right text-2xl font-bold">Job Junction (Job Portal Web App)</h3>
               </div>
               <p className="xl:-mr-16  container-left bg-[#b090e7] text-sm text-slate-900 md:text-lg p-2 md:p-6 rounded-md">
@@ -112,7 +112,7 @@ const Projects = () => {
             </div>
             <div className="w-full xl:w-1/2 flex flex-col gap-6 justify-start items-end text-right xl:-ml-16 z-10">
               <div>
-                <p className="font-titleFont text-textGreen text-sm tracking-wide">Featured Project</p>
+                <p className="font-titleFont text-textGreen text-sm tracking-wide">Featured Design</p>
                 <h3 className="container-left text-2xl font-bold">LiveLink (Real-Estate Web App)</h3>
               </div>
               <p className="container-right bg-[#b090e7] text-sm text-slate-900 md:text-lg p-2 md:p-6 rounded-md">
