@@ -2,7 +2,7 @@ import OrbitingCircles from "@/components/ui/orbiting-circles";
 
 const Skills = () => {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-bodyColor  ">
+    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-transparent  ">
       <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-bodyColor bg-clip-text text-center text-7xl font-semibold leading-none text-transparent dark:from-white ">
         Skills
       </span>

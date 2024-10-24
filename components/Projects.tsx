@@ -54,6 +54,26 @@ import { p4i12 } from "@/public/assets";
 import { p4i13 } from "@/public/assets";
 import { p4i14 } from "@/public/assets";
 
+//project5
+import { p5i1 } from "@/public/assets";
+import { p5i2 } from "@/public/assets";
+import { p5i3 } from "@/public/assets";
+import { p5i4 } from "@/public/assets";
+import { p5i5 } from "@/public/assets";
+import { p5i6 } from "@/public/assets";
+import { p5i7 } from "@/public/assets";
+import { p5i8 } from "@/public/assets";
+import { p5i9 } from "@/public/assets";
+import { p5i10 } from "@/public/assets";
+import { p5i11 } from "@/public/assets";
+import { p5i12 } from "@/public/assets";
+import { p5i13 } from "@/public/assets";
+import { p5i14 } from "@/public/assets";
+import { p5i15 } from "@/public/assets";
+import { p5i16 } from "@/public/assets";
+import { p5i17 } from "@/public/assets";
+import { p5i18 } from "@/public/assets";
+
 const Projects = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -101,6 +121,8 @@ const Projects = () => {
     p4i12,
     p4i13,
   ];
+
+  const projectFiveImages = [p5i18, p5i1, p5i2, p5i3, p5i4, p5i5, p5i6, p5i7, p5i8, p5i9, p5i10, p5i11, p5i12, p5i13, p5i14, p5i15, p5i16, p5i17];
 
   // Handle image click
   const handleImageClick = (
@@ -252,12 +274,12 @@ const Projects = () => {
           <div className='flex flex-col xl:flex-row gap-6'>
             <div
               className='w-full xl:w-96  h-auto relative group'
-              onClick={() => handleImageClick(projectThreeImages, 0)}
+              onClick={() => handleImageClick(projectFiveImages, 0)}
             >
               <div className='w-full h-72 overflow-hidden rounded-lg'>
                 <Image
                   className='container-left rounded-xl transform transition duration-300 hover:scale-105 hover:shadow-xl object-cover w-full h-full cursor-pointer'
-                  src={p3i1}
+                  src={p5i18}
                   alt='Real Estate'
                   layout='fill'
                 />
