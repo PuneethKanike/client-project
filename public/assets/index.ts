@@ -82,6 +82,32 @@ import p5i16 from "./images/projects/project5/image16.jpg"
 import p5i17 from "./images/projects/project5/image17.jpg"
 import p5i18 from "./images/projects/project5/image18.jpg"
 
+//project6
+
+import p6i1 from "./images/projects/project6/image1.jpg"
+import p6i2 from "./images/projects/project6/image2.jpg"
+import p6i3 from "./images/projects/project6/image3.jpg"
+import p6i4 from "./images/projects/project6/image4.jpg"
+import p6i5 from "./images/projects/project6/image5.jpg"
+
+//project7
+
+import p7i1 from "./images/projects/project7/image1.jpg"
+import p7i2 from "./images/projects/project7/image2.jpg"
+import p7i3 from "./images/projects/project7/image3.jpg"
+import p7i4 from "./images/projects/project7/image4.jpg"
+import p7i5 from "./images/projects/project7/image5.jpg"
+import p7i6 from "./images/projects/project7/image6.jpg"
+import p7i7 from "./images/projects/project7/image7.jpg"
+import p7i8 from "./images/projects/project7/image8.jpg"
+import p7i9 from "./images/projects/project7/image9.jpg"
+import p7i10 from "./images/projects/project7/image10.jpg"
+import p7i11 from "./images/projects/project7/image11.jpg"
+import p7i12 from "./images/projects/project7/image12.jpg"
+import p7i13 from "./images/projects/project7/image13.jpg"
+import p7i14 from "./images/projects/project7/image14.jpg"
+import p7i15 from "./images/projects/project7/image15.jpg"
+
 
 
 export { eShop, logo, profileImg, amazonImg, cyberImg, noorShop, jobJunction, realEstate, bg, bg2, 
@@ -94,7 +120,11 @@ p3i1, p3i2, p3i3, p3i4, p3i5, p3i6, p3i7, p3i8,
 
 p4i1, p4i2, p4i3, p4i4, p4i5, p4i6, p4i7, p4i8, p4i9, p4i10, p4i11, p4i12, p4i13, p4i14,
 
-p5i1, p5i2, p5i3, p5i4, p5i5, p5i6, p5i7, p5i8, p5i9, p5i10, p5i11, p5i12, p5i13, p5i14, p5i15, p5i16, p5i17, p5i18
+p5i1, p5i2, p5i3, p5i4, p5i5, p5i6, p5i7, p5i8, p5i9, p5i10, p5i11, p5i12, p5i13, p5i14, p5i15, p5i16, p5i17, p5i18,
+
+p6i1, p6i2, p6i3, p6i4, p6i5,
+
+p7i1, p7i2, p7i3, p7i4, p7i5, p7i6, p7i7, p7i8, p7i9, p7i10, p7i11, p7i12, p7i13, p7i14, p7i15
 
 
 
