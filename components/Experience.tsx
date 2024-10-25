@@ -93,7 +93,7 @@ const Experience = () => {
             <li
               onClick={handleApple}
               className={`${
-                workGoogle
+                workApple
                  ? "border-l-textGreen text-textDark bg-purple-300"
                   : "border-l-hoverColor text-textDark"
               } border-l-2 bg-transparent hover:bg-hoverColor py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
