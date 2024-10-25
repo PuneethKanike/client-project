@@ -1,11 +1,11 @@
-import { useState, useEffect, MouseEvent } from "react";
+import { useState, useEffect, useCallback, MouseEvent } from "react";
 import { AiOutlineLeft, AiOutlineRight, AiOutlineClose } from "react-icons/ai";
-import Image from "next/image"; // This is for rendering optimized images, not for preloading
+import Image from "next/image";
 
 interface CarouselModalProps {
-  images: string[]; // Array of image URLs for the project
-  initialIndex: number; // Initially clicked image index
-  onClose: () => void; // Close modal callback
+  images: string[];
+  initialIndex: number;
+  onClose: () => void;
 }
 
 const CarouselModal: React.FC<CarouselModalProps> = ({ images, initialIndex, onClose }) => {
@@ -15,32 +15,26 @@ const CarouselModal: React.FC<CarouselModalProps> = ({ images, initialIndex, onC
   const [isMobileView, setIsMobileView] = useState(false);
 
   // Preload the next/previous image
-  const preloadImage = (index: number) => {
+  const preloadImage = useCallback((index: number) => {
     if (images[index]) {
-      const img = new window.Image(); // Use the native JavaScript Image constructor
+      const img = new window.Image();
       img.src = images[index];
     }
-  };
+  }, [images]);
 
   useEffect(() => {
     // Preload the next and previous images
-    preloadImage((currentIndex + 1) % images.length); // Preload the next image
-    preloadImage((currentIndex - 1 + images.length) % images.length); // Preload the previous image
-  }, [currentIndex]);
+    preloadImage((currentIndex + 1) % images.length);
+    preloadImage((currentIndex - 1 + images.length) % images.length);
+  }, [currentIndex, preloadImage, images.length]);
 
-  // Check if the window width is <= 768px to determine mobile view
   useEffect(() => {
     const checkMobileView = () => {
       setIsMobileView(window.innerWidth <= 768);
     };
 
-    // Initial check
     checkMobileView();
-
-    // Add event listener for window resize
     window.addEventListener("resize", checkMobileView);
-
-    // Clean up event listener when component unmounts
     return () => window.removeEventListener("resize", checkMobileView);
   }, []);
 
@@ -60,18 +54,15 @@ const CarouselModal: React.FC<CarouselModalProps> = ({ images, initialIndex, onC
   };
 
   const handleImageClick = () => {
-    setIsMagnifying((prev) => !prev); // Toggle magnification state
+    setIsMagnifying((prev) => !prev);
   };
 
   return (
     <div className="no-select fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
-      {/* Close Button */}
       <AiOutlineClose
         onClick={onClose}
         className="absolute top-6 right-6 text-white text-2xl cursor-pointer z-50 hover:text-red-500 transition-transform transform hover:scale-110"
       />
-
-      {/* Left Arrow */}
       <div className="absolute left-4 md:left-6 text-white text-3xl md:text-4xl cursor-pointer z-50">
         <div
           className="bg-hoverColor bg-opacity-50 hover:bg-opacity-80 rounded-full p-3 hover:text-white transition-all duration-300 ease-in-out"
@@ -81,7 +72,6 @@ const CarouselModal: React.FC<CarouselModalProps> = ({ images, initialIndex, onC
         </div>
       </div>
 
-      {/* Image Container */}
       <div
         className="relative w-full max-w-[100%] md:max-w-[100%] h-[1000%] md:h-[100%] rounded-lg shadow-lg flex justify-center items-center p-4 md:p-6"
         onMouseMove={isMobileView || !isMagnifying ? undefined : handleMouseMove}
@@ -106,7 +96,6 @@ const CarouselModal: React.FC<CarouselModalProps> = ({ images, initialIndex, onC
         </div>
       </div>
 
-      {/* Right Arrow */}
       <div className="absolute right-4 md:right-6 text-white text-3xl md:text-4xl cursor-pointer z-50">
         <div
           className="bg-hoverColor bg-opacity-50 hover:bg-opacity-80 rounded-full p-3 hover:text-white transition-all duration-300 ease-in-out"
