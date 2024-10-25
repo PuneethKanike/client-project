@@ -48,6 +48,18 @@ const Navbar = () => {
     }
   }
 
+  const toggleFullScreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch((err) => {
+        console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+      });
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  };
+
   return (
     <div className='w-full shadow-navbarShadow md:shadow-none h-20 lg:h-[12vh] sticky top-0 z-50 bg-bodyColor px-4'>
       <div className='max-w-container h-full mx-auto py-1 font-titleFont flex items-center justify-between'>
@@ -100,6 +112,17 @@ const Navbar = () => {
               Resume
             </motion.button>
           </a>
+          <motion.button
+                onClick={toggleFullScreen}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6, ease: "easeIn" }}
+                className='px-4 py-2 rounded-md text-textGreen text-[13px] border border-textGreen hover:bg-hoverColor duration-300'
+              >
+                Fullscreen
+              </motion.button>
+
+          
         </div>
 
         {/* Mobile Menu Icon */}
