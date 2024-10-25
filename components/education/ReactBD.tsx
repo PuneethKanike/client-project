@@ -12,15 +12,17 @@ const ReactBD = () => {
       className="w-full"
     >
       <h3 className="flex gap-1 font-medium text-xl font-titleFont">
-        PU
+        Bachelor of Interior Design
+
         <span className="text-textGreen tracking-wide">
-          @Kumbala Academy Pre-University, Kasaragod Kerala, India
+          @Srinivas university
         </span>
       </h3>
-      <p className="text-sm mt-1 font-medium text-textDark">2016 - 2018</p>
+      <p className="text-sm mt-1 font-medium text-textDark">Mangalore , India</p>
+      <p className="text-sm mt-1 font-medium text-textDark">2018 - 2021</p>
       
       {/* Add the image here */}
-      <div className="mt-4">
+      {/* <div className="mt-4">
         <Image
           src={image1} // Replace with the path to your image
           alt="College"
@@ -28,7 +30,7 @@ const ReactBD = () => {
           height={200} // Adjust height as needed
           className="rounded" // Optional: add styling to the image
         />
-      </div>
+      </div> */}
     </motion.div>
   );
 };

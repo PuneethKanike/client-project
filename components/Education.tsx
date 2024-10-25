@@ -2,7 +2,7 @@ import { useState } from "react";
 import SectionTitle from "./SectionTitle";
 import SectionTitle2 from "./SectionTitle2";
 import Amazon from "./works/Amazon";
-import Apple from "./works/Apple";
+import Apple from "./education/Apple";
 import Google from "./education/Google";
 import ReactBD from "./education/ReactBD";
 import Splash from "./works/Splash";
@@ -80,7 +80,7 @@ const Education = () => {
                   : "border-l-hoverColor text-textDark"
               } border-l-2 bg-transparent hover:bg-hoverColor py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
             >
-              b.sc.ID
+              Degree
             </li>
             <li
               onClick={handleGoogle}
@@ -92,10 +92,21 @@ const Education = () => {
             >
               PU
             </li>
+            <li
+              onClick={handleApple}
+              className={`${
+                workApple
+                 ? "border-l-textGreen text-textDark bg-purple-300"
+                  : "border-l-hoverColor text-textDark"
+              } border-l-2 bg-transparent hover:bg-hoverColor py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
+            >
+              Higher school
+            </li>
             {/* Add more items here as needed */}
           </ul>
           {workReactbd && <ReactBD />}
           {workGoogle && <Google />}
+          {workApple && <Apple />}
           {/* Add more components as needed */}
         </div>
       </div>

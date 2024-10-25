@@ -1,4 +1,7 @@
 import { TiArrowForward } from "react-icons/ti";
+import Image from "next/image";
+import image1 from '../../public/assets/images/amazonImg.png'
+
 import { motion } from "framer-motion";
 const Google = () => {
   return (
@@ -6,45 +9,58 @@ const Google = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.1 }}
-      className='w-full'
+      className="w-full"
     >
-      <h3 className='flex gap-1 font-medium text-xl font-titleFont'>
-        @ Al Ameen Marble Ceramics & Decor
-        <span className='text-textGreen tracking-wide text-sm'>
-          | Fujairah. UAE
-        </span>
+      <h3 className="flex gap-1 font-medium text-xl font-titleFont">
+        
+        <span className="text-textGreen tracking-wide">@Al Ameen Marble Ceramics & Decor</span>
       </h3>
-      <p className='text-sm mt-1 font-medium text-textDark'>2022 - 2023</p>
-      <ul className='mt-6 flex flex-col gap-3'>
-        <li className='text-base flex gap-2 text-textDark'>
-          <span className='text-textGreen mt-1'>
+      <p className="text-sm mt-1 font-medium text-textDark">
+       Fujairah, UAE
+      </p>
+      <p className="text-sm mt-1 font-medium text-textDark">
+        2022 - 2023
+      </p>
+      <ul className="mt-6 flex flex-col gap-3">
+        <li className="text-base flex gap-2 text-textDark">
+          <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
-          Worked as interior designer and project executive, site supervisor for
-          both commercial an residential.
+          Preparing and checking Pre-tender documents and BOQ.
         </li>
-        <li className='text-base flex gap-2 text-textDark'>
-          <span className='text-textGreen mt-1'>
+        <li className="text-base flex gap-2 text-textDark">
+          <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
-          Experienced in making technical site work drawing and production
-          drawing.
+         Review of project drawing and specification; develop RFl's if required.
+
         </li>
-        <li className='text-base flex gap-2 text-textDark'>
-          <span className='text-textGreen mt-1'>
+        <li className="text-base flex gap-2 text-textDark">
+          <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
-          Excellent knowledge of 2d drawing manually skilled in use of all
-          appropriate tools and proficient.
+         Taking off quantities and checking with the client’s BOQ .
+
+
         </li>
-        <li className='text-base flex gap-2 text-textDark'>
-          <span className='text-textGreen mt-1'>
+        <li className="text-base flex gap-2 text-textDark">
+          <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
-          Preparing clear accurate plans and detailed drawing from rough
-          sketches
+         Rate analysis and preparing Quotations for the project based on our own
+
         </li>
+       
       </ul>
+      {/* <div className="mt-4">
+        <Image
+          src= "" // Replace with the path to your image
+          alt="College"
+          width={200} // Adjust width as needed
+          height={200} // Adjust height as needed
+          className="rounded" // Optional: add styling to the image
+        />
+      </div> */}
     </motion.div>
   );
 };

@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 
+/* Change the selection color */
+::selection {
+  background-color: #cc9ee8; /* Change this to your desired background color */
+  color: #ffffff; /* Change this to your desired text color */
+}
+
+/* For Firefox */
+::-moz-selection {
+  background-color: #9e55cb; /* Change this to your desired background color */
+  color: #ffffff; /* Change this to your desired text color */
+}
+
+
 .scrollbarHide::-webkit-scrollbar {
   display: none;
 }

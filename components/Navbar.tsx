@@ -48,17 +48,6 @@ const Navbar = () => {
     }
   }
 
-  // Function to toggle fullscreen
-  const toggleFullScreen = () => {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen(); // Enter fullscreen
-    } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen(); // Exit fullscreen
-      }
-    }
-  };
-
   return (
     <div className='w-full shadow-navbarShadow md:shadow-none h-20 lg:h-[12vh] sticky top-0 z-50 bg-bodyColor px-4'>
       <div className='max-w-container h-full mx-auto py-1 font-titleFont flex items-center justify-between'>
@@ -100,19 +89,6 @@ const Navbar = () => {
                 </motion.li>
               </Link>
             ))}
-            {/* Full Screen List Item */}
-            <li
-              onClick={toggleFullScreen}
-              className='flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300'
-            >
-              <motion.span
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.1, delay: 0.7 }}
-              >
-                Full Screen
-              </motion.span>
-            </li>
           </ul>
           <a href='/assets/safwan_resume.pdf' target='_blank'>
             <motion.button
@@ -183,19 +159,6 @@ const Navbar = () => {
                     </motion.li>
                   </Link>
                 ))}
-                {/* Mobile Full Screen Option */}
-                <li
-                  onClick={toggleFullScreen}
-                  className='flex items-center gap-1 font-medium text-white hover:text-textGreen cursor-pointer duration-300 nav-link'
-                >
-                  <motion.span
-                    initial={{ x: 20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.2, delay: 0.7, ease: "easeIn" }}
-                  >
-                    Full Screen
-                  </motion.span>
-                </li>
               </ul>
 
               <a href='/assets/safwan_resume.pdf' target='_blank'>
@@ -209,66 +172,59 @@ const Navbar = () => {
                 </motion.button>
               </a>
               <div className='flex gap-4 text-black bg-hoverColor p-4 rounded-md'>
-                {/* Social Links */}
+                {/* <motion.a initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.8, ease: "easeIn" }} href="https://github.com/PuneethKanike/" target="_blank" className="social-link">
+                  <TbBrandGithub />
+                </motion.a> */}
                 <motion.a
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.9, ease: "easeIn" }}
                   href='https://www.linkedin.com/in/mohammed-safwan-06441b225/'
                   target='_blank'
+                  className='social-link'
                 >
-                  <SlSocialLinkedin className='text-2xl text-slate-300 hover:text-textGreen cursor-pointer' />
+                  <SlSocialLinkedin />
                 </motion.a>
+                {/* <motion.a initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.95, ease: "easeIn" }} href="https://api.whatsapp.com/send?phone=917975187240" target="_blank" className="social-link">
+                  <TbBrandWhatsapp />
+                </motion.a> */}
                 <motion.a
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 1, ease: "easeIn" }}
-                  href='https://github.com/Safwan-H'
+                  href='https://www.instagram.com/safwan._saffu_____/?igsh=dGI3M3p2azgxMWJh'
                   target='_blank'
+                  className='social-link'
                 >
-                  <TbBrandGithub className='text-2xl text-slate-300 hover:text-textGreen cursor-pointer' />
-                </motion.a>
-                <motion.a
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 1.1, ease: "easeIn" }}
-                  href='https://www.facebook.com/safwan.husain.7'
-                  target='_blank'
-                >
-                  <SlSocialFacebook className='text-2xl text-slate-300 hover:text-textGreen cursor-pointer' />
-                </motion.a>
-                <motion.a
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 1.2, ease: "easeIn" }}
-                  href='https://wa.me/918495712200'
-                  target='_blank'
-                >
-                  <TbBrandWhatsapp className='text-2xl text-slate-300 hover:text-textGreen cursor-pointer' />
-                </motion.a>
-                <motion.a
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 1.3, ease: "easeIn" }}
-                  href='https://www.instagram.com/safwan._.husain/'
-                  target='_blank'
-                >
-                  <SlSocialInstagram className='text-2xl text-slate-300 hover:text-textGreen cursor-pointer' />
-                </motion.a>
-                <motion.a
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 1.4, ease: "easeIn" }}
-                  href='https://www.youtube.com/c/SafwanHusain'
-                  target='_blank'
-                >
-                  <SlSocialYoutube className='text-2xl text-slate-300 hover:text-textGreen cursor-pointer' />
+                  <SlSocialInstagram />
                 </motion.a>
               </div>
+
+              <motion.a
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2, ease: "easeIn" }}
+                className='text-sm w-72 tracking-widest text-purple-300 text-center mt-4'
+                href='mailto:safwansaffuh@gmail.com'
+              >
+                <p>safwansaffuh@gmail.com</p>
+              </motion.a>
             </motion.div>
           </div>
         )}
       </div>
+
+      <AnimatePresence>
+        {fadeOut && (
+          <motion.div
+            initial={{ backdropFilter: "blur(0px)" }} // No blur initiall
+            animate={{ backdropFilter: "blur(7px)" }} // Increase blur when opened
+            exit={{ backdropFilter: "blur(0px)" }} // Remove blur when closed
+            transition={{ duration: 0.3 }}
+            className='absolute top-0 right-0 w-full h-screen'
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };

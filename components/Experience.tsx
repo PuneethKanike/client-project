@@ -1,10 +1,9 @@
 import { useState } from "react";
 import SectionTitle from "./SectionTitle";
-import Amazon from "./works/Amazon";
+
 import Apple from "./works/Apple";
 import Google from "./works/Google";
 import ReactBD from "./works/ReactBD";
-import Splash from "./works/Splash";
 
 const Experience = () => {
   const [workReactbd, setWorkReactbd] = useState(true);
@@ -89,12 +88,23 @@ const Experience = () => {
                   : "border-l-hoverColor text-textDark"
               } border-l-2 bg-transparent hover:bg-hoverColor py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
             >
-              Qs engineer
+               Interior designer
+            </li>
+            <li
+              onClick={handleApple}
+              className={`${
+                workGoogle
+                 ? "border-l-textGreen text-textDark bg-purple-300"
+                  : "border-l-hoverColor text-textDark"
+              } border-l-2 bg-transparent hover:bg-hoverColor py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
+            >
+               Interior designer
             </li>
             {/* Add more items here as needed */}
           </ul>
           {workReactbd && <ReactBD />}
           {workGoogle && <Google />}
+          {workApple && <Apple />}
           {/* Add more components as needed */}
         </div>
       </div>
