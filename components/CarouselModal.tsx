@@ -1,6 +1,6 @@
 import { useState, useEffect, MouseEvent } from "react";
 import { AiOutlineLeft, AiOutlineRight, AiOutlineClose } from "react-icons/ai";
-import Image from "next/image";
+import Image from "next/image"; // This is for rendering optimized images, not for preloading
 
 interface CarouselModalProps {
   images: string[]; // Array of image URLs for the project
@@ -14,19 +14,33 @@ const CarouselModal: React.FC<CarouselModalProps> = ({ images, initialIndex, onC
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isMobileView, setIsMobileView] = useState(false);
 
-  // Check the window width to determine if the view is mobile or not
+  // Preload the next/previous image
+  const preloadImage = (index: number) => {
+    if (images[index]) {
+      const img = new window.Image(); // Use the native JavaScript Image constructor
+      img.src = images[index];
+    }
+  };
+
+  useEffect(() => {
+    // Preload the next and previous images
+    preloadImage((currentIndex + 1) % images.length); // Preload the next image
+    preloadImage((currentIndex - 1 + images.length) % images.length); // Preload the previous image
+  }, [currentIndex]);
+
+  // Check if the window width is <= 768px to determine mobile view
   useEffect(() => {
     const checkMobileView = () => {
-      setIsMobileView(window.innerWidth <= 768); // Disable magnification if screen width is <= 768px
+      setIsMobileView(window.innerWidth <= 768);
     };
 
     // Initial check
     checkMobileView();
 
-    // Add event listener to handle window resize
+    // Add event listener for window resize
     window.addEventListener("resize", checkMobileView);
 
-    // Clean up the event listener when the component unmounts
+    // Clean up event listener when component unmounts
     return () => window.removeEventListener("resize", checkMobileView);
   }, []);
 
@@ -45,7 +59,6 @@ const CarouselModal: React.FC<CarouselModalProps> = ({ images, initialIndex, onC
     setMousePosition({ x, y });
   };
 
-  // Toggle magnification on image click
   const handleImageClick = () => {
     setIsMagnifying((prev) => !prev); // Toggle magnification state
   };
@@ -57,7 +70,7 @@ const CarouselModal: React.FC<CarouselModalProps> = ({ images, initialIndex, onC
         onClick={onClose}
         className="absolute top-6 right-6 text-white text-2xl cursor-pointer z-50 hover:text-red-500 transition-transform transform hover:scale-110"
       />
-      
+
       {/* Left Arrow */}
       <div className="absolute left-4 md:left-6 text-white text-3xl md:text-4xl cursor-pointer z-50">
         <div
@@ -68,32 +81,29 @@ const CarouselModal: React.FC<CarouselModalProps> = ({ images, initialIndex, onC
         </div>
       </div>
 
-      {/* Image container */}
+      {/* Image Container */}
       <div
         className="relative w-full max-w-[100%] md:max-w-[100%] h-[1000%] md:h-[100%] rounded-lg shadow-lg flex justify-center items-center p-4 md:p-6"
-        onMouseMove={isMobileView || !isMagnifying ? undefined : handleMouseMove} // Only track mouse if magnifying and not mobile
+        onMouseMove={isMobileView || !isMagnifying ? undefined : handleMouseMove}
       >
         <div
-  className="relative w-full h-full cursor-pointer"
-  style={{
-    
-    backgroundImage: isMagnifying && !isMobileView ? `url(${images[currentIndex]})` : 'none',
-    backgroundSize: isMagnifying ? '120%' : 'contain', // Adjust magnification to 120%
-    backgroundPosition: `${mousePosition.x}% ${mousePosition.y}%`,
-    transition: 'background-size 0.3s ease',
-  }}
-  onClick={handleImageClick} // Handle click for magnification toggle
->
-  {/* Image will be hidden on magnification by reducing opacity */}
-  <Image
-    src={images[currentIndex]}
-    alt={`carousel image ${currentIndex + 1}`}
-    layout="fill"
-    objectFit="contain"
-    className={`rounded-lg transition-opacity duration-300 ${isMagnifying && !isMobileView ? 'opacity-0' : 'opacity-100'}`}
-  />
-</div>
-
+          className="relative w-full h-full cursor-pointer"
+          style={{
+            backgroundImage: isMagnifying && !isMobileView ? `url(${images[currentIndex]})` : 'none',
+            backgroundSize: isMagnifying ? '120%' : 'contain',
+            backgroundPosition: `${mousePosition.x}% ${mousePosition.y}%`,
+            transition: 'background-size 0.3s ease',
+          }}
+          onClick={handleImageClick}
+        >
+          <Image
+            src={images[currentIndex]}
+            alt={`carousel image ${currentIndex + 1}`}
+            layout="fill"
+            objectFit="contain"
+            className={`rounded-lg transition-opacity duration-300 ${isMagnifying && !isMobileView ? 'opacity-0' : 'opacity-100'}`}
+          />
+        </div>
       </div>
 
       {/* Right Arrow */}

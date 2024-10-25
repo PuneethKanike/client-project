@@ -68,7 +68,7 @@ const Skills = () => {
         radius={220}
         duration={25}
         delay={10}
-        reverse
+        
       >
         <span className="text-2xl">Autocad 2D</span>
       </OrbitingCircles>
@@ -78,7 +78,7 @@ const Skills = () => {
         radius={220}
         duration={25}
         delay={20}
-        reverse
+        
       >
         <span className="text-2xl">Lumion rendering</span>
       </OrbitingCircles>
@@ -87,7 +87,7 @@ const Skills = () => {
         radius={220}
         duration={25}
         delay={30}
-        reverse
+        
       >
         <span className="text-2xl">Adobe Photoshop</span>
       </OrbitingCircles>
