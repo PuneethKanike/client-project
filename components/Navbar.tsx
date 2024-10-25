@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { logo } from "@/public/assets";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,6 +16,32 @@ const Navbar = () => {
   const ref = useRef<string | any>("");
   const [show, setShow] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  useEffect(() => {
+    const sections = ["home", "about", "education", "experience", "project", "contact"];
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.6, // Adjust as needed
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, options);
+
+    sections.forEach((section) => {
+      const element = document.getElementById(section);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
 
   const handleScroll = async (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
@@ -74,34 +100,30 @@ const Navbar = () => {
         </Link>
 
         <div className='hidden mdl:inline-flex items-center gap-7'>
-          <ul className='flex text-[13px] gap-7'>
-            {[
-              "home",
-              "about",
-              "education",
-              "experience",
-              "project",
-              "contact",
-            ].map((section, index) => (
-              <Link
-                key={section}
-                className='flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link'
-                href={`#${section}`}
-                onClick={handleScroll}
-              >
-                <motion.li
-                  initial={{ y: -10, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.1, delay: index * 0.1 }}
-                >
-                  <span className='text-textGreen'>
-                    {index < 9 ? `0${index + 1}.` : `${index + 1}.`}
-                  </span>
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
-                </motion.li>
-              </Link>
-            ))}
-          </ul>
+          <ul className="flex text-[13px] gap-7">
+  {["home", "about", "education", "experience", "project", "contact"].map((section, index) => (
+    <Link
+      key={section}
+      className={`flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link ${
+        activeSection === section ? "active" : ""
+      }`}
+      href={`#${section}`}
+      onClick={handleScroll}
+    >
+      <motion.li
+        initial={{ y: -10, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.1, delay: index * 0.1 }}
+      >
+        <span className="text-textGreen">
+          {index < 9 ? `0${index + 1}.` : `${index + 1}.`}
+        </span>
+        {section.charAt(0).toUpperCase() + section.slice(1)}
+      </motion.li>
+    </Link>
+  ))}
+</ul>
+
           <a href='/assets/safwan_resume.pdf' target='_blank'>
             <motion.button
               initial={{ opacity: 0 }}

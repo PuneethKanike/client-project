@@ -1,32 +1,40 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { Typewriter } from "react-simple-typewriter"; // Import Typewriter
+import { Typewriter } from "react-simple-typewriter";
+import { FaMouse } from "react-icons/fa"; // Import mouse icon
 
 const Banner = () => {
-  
-
   // Bouncing animation for the right image with continuous up and down motion
   const imageBounceAnimation = {
-    y: [0, -20, 0], // Moves up 20px and back down
+    y: [0, -20, 0],
     transition: {
-      duration: 2, // Duration of the animation
-      ease: "easeInOut", // Smoother easing
-      repeat: Infinity, // Keep repeating the bounce
-      repeatType: "loop", // Loop the animation
+      duration: 2,
+      ease: "easeInOut",
+      repeat: Infinity,
+      repeatType: "loop",
+    },
+  };
+
+  // Scroll icon animation (visible every 5 seconds)
+  const scrollIconAnimation = {
+    opacity: [0, 1, 1, 0], // Visible briefly, then disappears
+    y: [0, 30, 0], // Up and down motion while visible
+    transition: {
+      duration: 1.5,
+      ease: "easeInOut",
+      times: [0, 0.2, 0.8, 1], // Controls the timing of visibility and motion
+      repeat: Infinity,
+      repeatDelay: 3.5, // Delay between each appearance
     },
   };
 
   return (
     <section
       id="home"
-      className=" max-w-contentContainer mx-auto py-10 mdl:py-28 flex flex-col lgl:flex-row gap-4 lgl:gap-8 mdl:px-10 xl:px-4 relative overflow-hidden"
-      style={{ overflow: "visible" }} // Allow overflow
-      
+      className="bg-transparent max-w-contentContainer mx-auto py-10 mdl:py-28 flex flex-col lgl:flex-row gap-4 lgl:gap-8 mdl:px-10 xl:px-4 relative overflow-hidden"
+      style={{ overflow: "visible" }}
     >
       {/* Left Side (Text with bouncing animation) */}
-      <motion.div
-        className="flex flex-col gap-4 lgl:gap-8 flex-1 relative z-10"
-      >
+      <motion.div className="flex flex-col gap-4 lgl:gap-8 flex-1 relative z-10">
         <motion.h1
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -72,11 +80,7 @@ const Banner = () => {
           </span>
         </motion.p>
 
-        <a
-          href="#project"
-          
-          
-        >
+        <a href="#project">
           <motion.button
             initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -86,31 +90,39 @@ const Banner = () => {
             Check out my designs!
           </motion.button>
         </a>
+
+        {/* Scroll Down Mouse Icon with 5-second interval animation */}
+        <motion.div
+          animate={scrollIconAnimation}
+          className="mt-6 flex justify-center items-center text-slate-500"
+        >
+          <FaMouse size={24} />
+          <span className="ml-2 text-sm font-medium">Scroll down</span>
+        </motion.div>
       </motion.div>
 
       {/* Right Side (Image with continuous bounce animation and overflow) */}
       <motion.div
-        className="hidden lgl:flex bounce flex-1 relative "
-        
+        className="hidden lgl:flex bounce flex-1 relative"
         style={{
           zIndex: 5,
-          position: 'absolute',
-          top: '0',
-          right: '0',
-          width: '60%', // Adjust width to overflow slightly
-          height: '100%', // Allow height to overflow
-          overflow: 'hidden', // Ensure overflow is visible
+          position: "absolute",
+          top: "0",
+          right: "0",
+          width: "60%",
+          height: "100%",
+          overflow: "hidden",
         }}
       >
         <div
-           style={{
-    backgroundImage: `url(../assets/images/bg3.png)`,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: "right",
-    backgroundSize: '150%', // Change to '150%' for a larger size or use 'cover'
-    height: "100%",
-    width: "100%",
-  }}
+          style={{
+            backgroundImage: `url(../assets/images/bg3.png)`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "right",
+            backgroundSize: "150%",
+            height: "100%",
+            width: "100%",
+          }}
         />
       </motion.div>
     </section>
