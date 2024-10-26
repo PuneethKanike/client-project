@@ -28,7 +28,7 @@ const Contact = () => {
 
       {/* Form */}
       <form
-        action="https://formspree.io/f/mwpejavr"
+        action="https://formspree.io/f/mpwzqzrz"
         method="post"
         className="w-full max-w-[600px] mt-6 flex flex-col gap-4 p-6 bg-bodyColor bg-opacity-10 border border-white border-opacity-20 backdrop-filter backdrop-blur-lg shadow-lg rounded-xl z-10"
       >
