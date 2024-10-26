@@ -94,7 +94,7 @@ const Banner = () => {
         {/* Scroll Down Mouse Icon with 5-second interval animation */}
         <motion.div
           animate={scrollIconAnimation}
-          className="mt-6 flex justify-center items-center text-slate-500"
+          className="mt-8 flex justify-center items-center text-slate-500"
         >
           <FaMouse size={24} />
           <span className="ml-2 text-sm font-medium">Scroll down</span>
